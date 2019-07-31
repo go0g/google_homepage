@@ -3,7 +3,7 @@ html, body{
     height: 100%;
 }
 body{
-    ont-family: arial,sans-serif;
+    font-family: arial,sans-serif;
     font-size: 13px;
 }
 .container{
@@ -11,15 +11,13 @@ body{
     height: 100%;    
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 24px;
-    padding-top: 16px;
-    padding-right: 30px;
 }
 .nav{
     width: 100%;
     list-style: none;  
-    margin: 0;  
-    padding: 0;   
+    padding-left: 24px;
+    padding-top: 16px;
+    padding-right: 30px;  
 }
 
 .nav li{
@@ -27,17 +25,54 @@ body{
 }
 .nav a{
     text-decoration: none;
-
 }
+.nav a:link{
+    color: #5F6368;
+}
+.nav a:visited{
+    color: #5F6368;
+}
+.nav a:hover{
+    color: rgb(69, 71, 73);
+    text-decoration: underline;
+}
+.nav a:active{
+    color: #5F6368;
+}
+
 /*Navigation */
 nav{
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between;   
 }
+
+
+nav ul:first-child li{
+    margin-right: 15px;
+}
+
 nav ul:last-child{
     text-align: right;
 }
+nav ul:last-child li{
+    margin-left: 15px;
+}
+
+.app-icon{
+    display: grid;
+    grid-template-rows: repeat(3, 4px);
+    grid-template-columns: repeat(3, 4px);
+    grid-gap: 2px;
+    position: relative;
+    top: -9px;    
+}
+.item{
+    background: #5F6368;
+}
+.app-icon:hover .item{
+    background: rgb(44, 46, 48);
+}
+
 .button_flat{
     color: #fff;
     border: 1px solid #4285f4; 
@@ -52,6 +87,7 @@ nav ul:last-child{
     background: -moz-linear-gradient(top,#4387fd,#4683ea);
     background: linear-gradient(top,#4387fd,#4683ea);
     border-radius: 2px;
+    padding: 0 1em ;
 }
 /*Main*/
 main{
@@ -59,13 +95,17 @@ main{
 }
 #search input{
     background-color: transparent;
-    border: none;
-    margin: 0;
-    margin-top: 0px;
-    padding: 0;
+    border: 1px rgba(97, 93, 93, 0.1) solid;
+    width: 50%;
+    border-radius: 40px;
+    padding: 16px 20px;
+    margin: 30px 0;
+    font-size: 1.2em;
     color: rgba(0,0,0,.87);
     word-wrap: break-word;
     outline: none;
+    -webkit-box-shadow: -1px 2px 8px 3px rgba(97, 93, 93, 0.2); 
+    box-shadow: -1px 2px 8px 3px rgba(92, 89, 89, 0.2);
 
 }
 .button_search{
@@ -90,10 +130,18 @@ main{
 
 /*Footer*/
 footer{
-   
+   background: #eee9e9;   
+   border-top: 1px rgb(213, 226, 247) solid;
 }
-.footer{
-    display: flex;
-    justify-content: space-around; 
-   
+footer p{
+    color: #5F6368;
+    padding-left: 24px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px rgb(213, 226, 247) solid;
+}
+footer .nav{
+    padding-top: 0;
+    margin-top: 5px;
+    
 }
